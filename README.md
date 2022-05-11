@@ -18,7 +18,7 @@ Here is an example that uses trap to always created the test report:
 go install github.com/jstemmer/go-junit-report@latest
 go install github.com/alexec/junit2md@latest
 
-trap 'go-junit-report < test.out > junit.xml && junit2md < junit.xml > test-report.html' EXIT
+trap 'go-junit-report < test.out > junit.xml && junit2md < junit.xml > test-report.md' EXIT
 
 go test -v -cover ./... 2>&1 > test.out
 ```
