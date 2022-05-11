@@ -1,4 +1,4 @@
-module github.com/alexec/junit2html
+module github.com/alexec/junit2md
 
 go 1.18
 
