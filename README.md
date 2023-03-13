@@ -10,13 +10,29 @@ Convert Junit XML reports (`junit.xml`) into Markdown reports using Golang.
 
 ![screenshot](screenshot.png)
 
+## Install
+
+Like `jq`, `junit2md` is a tiny (8Mb) standalone binary. You can download it from the [releases page](https://github.com/kitproj/junit2md/releases/latest).
+
+If you're on MacOS, you can use `brew`:
+
+```bash
+brew tap kitproj/junit2md --custom-remote https://github.com/kitproj/junit2md
+brew install junit2md
+```
+
+Otherwise, you can use `curl`:
+
+```bash
+curl -q https://raw.githubusercontent.com/kitproj/junit2md/main/install.sh | sh
+```
+
 ## Usage
 
 Here is an example that uses trap to always created the test report:
 
 ```bash
 go install github.com/jstemmer/go-junit-report@latest
-go install github.com/alexec/junit2md@latest
 
 trap 'go-junit-report < test.out > junit.xml && junit2md < junit.xml > test-report.md' EXIT
 
