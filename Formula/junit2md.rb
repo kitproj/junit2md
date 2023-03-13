@@ -5,20 +5,20 @@
 class Junit2md < Formula
   desc "Crazy fast local dev loop."
   homepage "https://github.com/kitproj/junit2md"
-  version "0.0.4"
+  version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kitproj/junit2md/releases/download/v0.0.4/junit2md_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "81577dc6affef9fe699f54092d75466fb85b2fe5f5488e741c6e029ffa37da74"
+    if Hardware::CPU.intel?
+      url "https://github.com/kitproj/junit2md/releases/download/v0.1.0/junit2md_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "0efc66e7a73d421ca916a2f1467d659cf79b976bbaa77a603cb944b5205024c4"
 
       def install
         bin.install "junit2md"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kitproj/junit2md/releases/download/v0.0.4/junit2md_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "5a1de77811e8d57ced78adcc9028f797477102ca8e05ffbf92b7181eb7f2b5f7"
+    if Hardware::CPU.arm?
+      url "https://github.com/kitproj/junit2md/releases/download/v0.1.0/junit2md_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "f9da49577726c487078d3992979d20b3954a8c8e15986223fbdfe01df71b73aa"
 
       def install
         bin.install "junit2md"
@@ -28,16 +28,16 @@ class Junit2md < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kitproj/junit2md/releases/download/v0.0.4/junit2md_0.0.4_Linux_arm64.tar.gz"
-      sha256 "d85c67de28c56645250b1ffd973312303ea1a95230b8ffeada7960bb2f81313d"
+      url "https://github.com/kitproj/junit2md/releases/download/v0.1.0/junit2md_0.1.0_Linux_arm64.tar.gz"
+      sha256 "b3a393f0cd21472d66e467fe6ed7b42b71ad7086fb4a491328a741ab84b67eb6"
 
       def install
         bin.install "junit2md"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kitproj/junit2md/releases/download/v0.0.4/junit2md_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "19583cedbb07757795dedff459225f18c94b416ac820d4ccbbe66cf7dad2b6d3"
+      url "https://github.com/kitproj/junit2md/releases/download/v0.1.0/junit2md_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "5ba0f22ff939cd92da02acf5f687ee747a2e8b8f5997494ddb37471757e3a8b0"
 
       def install
         bin.install "junit2md"
