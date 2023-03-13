@@ -1,6 +1,6 @@
 # junit2md
 
-Convert Junit XML reports (`junit.xml`) into Markdown reports using Golang.
+Convert Junit XML reports (`junit.xml`) into Markdown reports using single binary.
 
 * Standalone binary.
 * Failed tests are top, that's what's important.
@@ -12,7 +12,7 @@ Convert Junit XML reports (`junit.xml`) into Markdown reports using Golang.
 
 ## Install
 
-Like `jq`, `junit2md` is a tiny (8Mb) standalone binary. You can download it from the [releases page](https://github.com/kitproj/junit2md/releases/latest).
+Like `jq`, `junit2md` is a tiny (3Mb) standalone binary. You can download it from the [releases page](https://github.com/kitproj/junit2md/releases/latest).
 
 If you're on MacOS, you can use `brew`:
 
